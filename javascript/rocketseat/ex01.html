@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função exibir dados do usuário</title>
+</head>
+
+<body>
+
+    <script>
+        
+        function dadosUsuario(cidade, uf, bairro, rua, numero) {
+            var resultado = `O usuário mora em ${cidade} / ${uf}, no bairro ${bairro}, na rua "${rua}" com nº ${numero}.`;
+
+            return resultado;
+        }
+
+        var resultado = dadosUsuario("São Paulo", "SP", "Centro", "Rua dos Pinheiros", 1293);
+
+        console.log(resultado);
+        
+    </script>
+</body>
+
+</html>
