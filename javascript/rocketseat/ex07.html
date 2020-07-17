@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos e mudando a cor via JS</title>
+</head>
+
+<body>
+    <button id="new">Novo quadrado</button>
+
+    <div id="squares"></div>
+
+    <script>
+        var buttonElement = document.querySelector('#new');
+        var squaresElement = document.querySelector('#squares');
+
+        buttonElement.onclick = function () {
+            var square = document.createElement('div');
+
+            square.style.width = '100px';
+            square.style.height = '100px';
+            square.style.margin = '2px';
+            square.style.backgroundColor = '#f00';
+
+            square.onmouseover = function() {
+                square.style.backgroundColor = getRandomColor();
+            }
+
+            squaresElement.appendChild(square);
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    </script>
+</body>
+
+</html>

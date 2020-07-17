@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função criando elementos via JS</title>
+</head>
+
+<body>
+    <button id="new">Novo quadrado</button>
+
+    <div id="squares"></div>
+
+    <script>
+        var buttonElement = document.querySelector('#new');
+        var squaresElement = document.querySelector('#squares');
+        
+        buttonElement.onclick = function() {
+            var square = document.createElement('div');
+
+            square.style.width = '100px';
+            square.style.height = '100px';
+            square.style.margin = '2px';
+            square.style.backgroundColor = '#f00';
+
+            squaresElement.appendChild(square);
+        }
+    </script>
+</body>
+
+</html>
